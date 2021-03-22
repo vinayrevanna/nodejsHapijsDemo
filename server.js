@@ -11,9 +11,9 @@ const init = async () => {
 
   //to use plugins
   await server.register([
-      require('hapi-geo-locate')
+      require('hapi-geo-locate'),
   ])
-  
+
   server.route([
     {
       method: "GET",

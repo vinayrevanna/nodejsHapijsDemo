@@ -10,8 +10,17 @@ const init = async () => {
   });
 
   //to use plugins
-  await server.register([
-      require('hapi-geo-locate'),
+  await server.register([{
+    register: require('hapi-geo-locate')
+    },
+    { 
+      register: 'hapi-locale',
+      options: {
+          createAccessors: true,
+          getter: 'i18n.getLocale',
+          setter: 'i18n.setLocale'
+      }
+  }
   ])
 
   server.route([
@@ -19,7 +28,7 @@ const init = async () => {
       method: "GET",
       path: "/",
       handler: (req, h) => {
-        return "<h1> Hello from Hapi js</h1>";
+        return "<h1> Hello from Hapi jss</h1>";
       },
     },
     {

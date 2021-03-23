@@ -18,6 +18,8 @@
   "homepage": "https://github.com/vinayrevanna/nodejsHapijsDemo#readme",
   "dependencies": {
     "@hapi/hapi": "^20.1.1",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-cron": "^1.1.0",
     "hapi-geo-locate": "^4.1.1"
   }
 }

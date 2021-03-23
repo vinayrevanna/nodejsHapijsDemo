@@ -10,8 +10,17 @@ const init = async () => {
   });
 
   //to use plugins
-  await server.register([
-      require('hapi-geo-locate'),
+  await server.register([{
+    register: require('hapi-geo-locate')
+    },
+    { 
+      register: 'hapi-locale',
+      options: {
+          createAccessors: true,
+          getter: 'i18n.getLocale',
+          setter: 'i18n.setLocale'
+      }
+  }
   ])
 
   server.route([

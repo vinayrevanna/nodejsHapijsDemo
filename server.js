@@ -28,7 +28,7 @@ const init = async () => {
       method: "GET",
       path: "/",
       handler: (req, h) => {
-        return "<h1> Hello from Hapi js</h1>";
+        return "<h1> Hello from Hapi jss</h1>";
       },
     },
     {
